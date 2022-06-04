@@ -24,6 +24,10 @@ body {
   margin: 30px 0;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 .form_area {
   max-width: 500px;
   width: 90%;
@@ -76,5 +80,31 @@ body {
 
 .form_area .input_row .submit_btn:hover {
   opacity: 0.9;
+}
+
+.form_area .input_row .errormsg {
+  color: red;
+  display: none;
+}
+
+.form_area .input_row .successmsg {
+  color: green;
+  display: none;
+}
+
+.form_area .erroActive .errormsg {
+  display: block;
+}
+
+.form_area .erroActive .successmsg {
+  display: none;
+}
+
+.form_area .sucessActive .errormsg {
+  display: none;
+}
+
+.form_area .sucessActive .successmsg {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */

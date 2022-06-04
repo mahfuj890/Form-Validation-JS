@@ -8,26 +8,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<form action="" class="form_area">
+<form action="" class="form_area" id="form">
     <div class="input_row">
         <label for="">Name</label>
-        <input type="text" placeholder="Please Enter Name">
+        <input type="text" placeholder="Please Enter Name" id="name" >
+        <small class="errormsg" id="nameError">Show Error Messag</small>
+        <small class="successmsg"  >Looks Good</small>
+
     </div>
     <div class="input_row">
         <label for="">Email</label>
-        <input type="email" placeholder="Please Enter Email">
+        <input type="email" placeholder="Please Enter Email" id="email"  >
+        <small class="errormsg" id="emailError">Show Error Messag</small>
+        <small class="successmsg"  >Looks Good</small>
     </div>
     <div class="input_row">
         <label for="">Phone Number</label>
-        <input type="number" placeholder="Please Enter Number">
+        <input type="number" placeholder="Please Enter Number" id="number"   >
+        <small class="errormsg" id="numberError">Show Error Messag</small>
+        <small class="successmsg"  >Looks Good</small>
     </div>
     <div class="input_row">
         <label for="">Password</label>
-        <input type="password" placeholder="Please Enter Password">
+        <input type="password" placeholder="Please Enter Password" id="password"  >
+        <small class="errormsg" id="passwordError">Show Error Messag</small>
+        <small class="successmsg"  >Looks Good</small>
     </div>
     <div class="input_row">
       <div>
-          <button type="button" class="submit_btn">Submit</button>
+          <button type="submit" class="submit_btn">Submit</button>
       </div>
     </div>
 
