@@ -13,12 +13,13 @@ form.addEventListener("submit", (e) => {
 //Validation Function
 const checkInputValidation = (inputDiv) => {
   let inputFiled = document.getElementById(inputDiv);
-
   //Text Filed
   if (inputFiled.type == "text") {
     if (inputFiled.value.trim() == "") {
       showErrorMsg(inputDiv, "nameError", "Filed should not blank");
     } else {
+
+      inputFiled.required = false;
       showSuccessMsg(inputDiv);
     }
   }
@@ -31,6 +32,7 @@ const checkInputValidation = (inputDiv) => {
     if (inputFiled.value.trim() == "") {
       showErrorMsg(inputDiv, "emailError", "Filed should not blank");
     } else if (validateRgx.test(String(emailValue).toLowerCase())) {
+      inputFiled.required = false;
       showSuccessMsg(inputDiv);
     } else {
       showErrorMsg(inputDiv, "emailError", "Please enter right email");
@@ -43,6 +45,7 @@ const checkInputValidation = (inputDiv) => {
     if (inputFiled.value.trim() == "") {
       showErrorMsg(inputDiv, "numberError", "Filed should not blank");
     } else if (inputFiledLength == 13) {
+      inputFiled.required = false;
       showSuccessMsg(inputDiv);
     } else if (inputFiledLength < 13) {
       let numberCalculate = 13 - inputFiledLength;
@@ -69,6 +72,7 @@ const checkInputValidation = (inputDiv) => {
     if (inputFiled.value.trim() == "") {
       showErrorMsg(inputDiv, "passwordError", "Filed should not blank");
     } else if (inputFiledLength >= 6 && inputFiledLength <= 12) {
+      inputFiled.required = false;
       showSuccessMsg(inputDiv);
     } else if (inputFiledLength < 6) {
       let numberCalculate = 6 - inputFiledLength;
@@ -88,6 +92,12 @@ const checkInputValidation = (inputDiv) => {
       showErrorMsg(inputDiv, "passwordError", "Please Enter Right Password");
     }
   }
+  else{
+    console.log('Submited');
+  }
+  console.log('Submited from outside');
+
+
 };
 
 //Display Error Message
